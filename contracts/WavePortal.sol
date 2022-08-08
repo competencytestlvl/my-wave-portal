@@ -28,7 +28,7 @@ contract WavePortal {
     // The variable below stores an array of structs to hold the waves
     Wave[] waves;
 
-    // Map an addres to a number for the latest time user called the wave function
+    // Map an address (simillar to hash table/dictionary) to a number for the latest time user called the wave function
     mapping(address => uint) latestWaveAt;
 
     // Constructor that will run with each instantiation of the contract
