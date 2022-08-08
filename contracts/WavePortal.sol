@@ -44,9 +44,9 @@ contract WavePortal {
     // Custom publically visible function similar to public API endpoint
     // The message parameter is based on what the user sends via the frontend
     function wave(string memory _message) public{
-        // Set current timestamp at least 15 min more than the previous recorded timestamp (cooldown period)
-        require((latestWaveAt[msg.sender] + 5 minutes) < block.timestamp, "Reswpan time is 5 minutes.");
-        // Update the current timestamp of user
+        // Set current timestamp at least xx min more than the previous recorded timestamp (cooldown period)
+        require((latestWaveAt[msg.sender] + 5 minutes) < block.timestamp, "Respawn time is 5 minutes.");
+        // Update the current timestamp of user with the msg.sender address key
         latestWaveAt[msg.sender] = block.timestamp;
 
         // Increment wave count
