@@ -31,7 +31,8 @@ contract WavePortal {
     // Map an address (simillar to hash table/dictionary) to a number for the latest time user called the wave function
     mapping(address => uint) latestWaveAt;
 
-    // Constructor that will run with each instantiation of the contract
+    // Constructor that will run with each instantiation of the contract. 
+    // Payable modifier here means the function can receive or send ETH 
     constructor() payable {
         console.log("Contract initialized");
         // define initial seed number
